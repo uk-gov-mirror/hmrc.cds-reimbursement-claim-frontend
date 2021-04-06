@@ -35,7 +35,7 @@
 )
 
 @(
-    pageTitle: Option[String] = None,
+    pageTitle: String = "",
     headBlock: Option[Html] = None,
     scriptsBlock: Option[Html] = None,
     timeOut: Boolean = true,
@@ -118,7 +118,7 @@
     }
 
     @govukLayout(
-        pageTitle = pageTitle,
+        pageTitle = Some(viewConfig.pageTitleWithServiceName(s"$pageTitle", messages("service.title"))),
         headBlock = Some(head(Some(defaultHead))),
         scriptsBlock = Some(scripts),
         beforeContentBlock = Some(beforeContentBlock),

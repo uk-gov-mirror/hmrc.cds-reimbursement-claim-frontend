@@ -44,7 +44,7 @@ formWithCSRF: uk.gov.hmrc.govukfrontend.views.html.helpers.formWithCSRF,
      @postAction = @{if(isAmend) routes.SelectBasisForClaimController.changeBasisForClaimSubmit() else routes.SelectBasisForClaimController.selectBasisForClaimSubmit()}
      @link = @{if(isAmend) routes.CheckYourAnswersAndSubmitController.checkAllAnswers else backLink}
 
-    @layout(pageTitle = Some(s"$title"), backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
 
         @errorSummary(form.errors)
 

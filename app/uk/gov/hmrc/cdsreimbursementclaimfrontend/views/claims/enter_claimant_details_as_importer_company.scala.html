@@ -53,7 +53,7 @@
 
     @countryCodeKey = @{"countryCode"}
 
-    @layout(pageTitle = Some(s"$title"), backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
 
         @errorSummary(form.errors)
 

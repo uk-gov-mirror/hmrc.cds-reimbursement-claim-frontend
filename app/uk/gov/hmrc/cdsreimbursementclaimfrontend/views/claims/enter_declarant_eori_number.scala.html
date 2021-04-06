@@ -37,7 +37,7 @@
     @key = @{"enter-declarant-eori-number"}
     @title = @{messages(s"$key.title")}
 
-    @layout(pageTitle = Some(s"$title"), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, signedInUserDetails = request.signedInUserDetails) {
 
         @errorSummary(form.errors)
 

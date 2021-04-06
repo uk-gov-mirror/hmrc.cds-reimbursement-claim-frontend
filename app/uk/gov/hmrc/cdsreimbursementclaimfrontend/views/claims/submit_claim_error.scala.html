@@ -28,7 +28,7 @@
     @key = @{"submit-claim-error"}
     @title = @{messages(s"$key.title")}
 
-    @layout(pageTitle = Some(s"$title"), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, signedInUserDetails = request.signedInUserDetails) {
 
         @pageHeading(title)
 

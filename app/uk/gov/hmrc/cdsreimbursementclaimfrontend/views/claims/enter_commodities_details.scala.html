@@ -40,7 +40,7 @@
     @postAction = @{if(isAmend) routes.EnterCommoditiesDetailsController.changeCommoditiesDetailsSubmit else routes.EnterCommoditiesDetailsController.enterCommoditiesDetailsSubmit}
     @bLink = @{if(isAmend) routes.CheckYourAnswersAndSubmitController.checkAllAnswers else link}
 
-    @layout(pageTitle = Some(s"$title"), backLink = Some(bLink), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, backLink = Some(bLink), signedInUserDetails = request.signedInUserDetails) {
 
         @errorSummary(form.errors)
 

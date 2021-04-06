@@ -37,7 +37,7 @@
     @key = @{"check-declaration-details"}
     @title = @{messages(s"$key.title")}
 
-    @layout(pageTitle = Some(s"$title"), backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
 
         @pageHeading(title)
 

@@ -44,7 +44,7 @@
  @postAction = @{if(isAmend) routes.SelectReasonForBasisAndClaimController.changeReasonForClaimAndBasisSubmit() else routes.SelectReasonForBasisAndClaimController.selectReasonForClaimAndBasisSubmit()}
  @link = @{if(isAmend) routes.CheckYourAnswersAndSubmitController.checkAllAnswers else backLink}
 
-    @layout(pageTitle = Some(s"$title"), backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
+    @layout(pageTitle = title, backLink = Some(link), signedInUserDetails = request.signedInUserDetails) {
 
         @formWithCSRF(postAction, 'novalidate -> "novalidate") {
 
